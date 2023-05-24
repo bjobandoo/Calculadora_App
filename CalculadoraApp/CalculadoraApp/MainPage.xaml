@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraApp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calculator App!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Label Text="" x:Name="lblNumero1"></Label>
+        <Label Text="" x:Name="lblOperacion"></Label>
+        <Label Text="" x:Name="lblNumero2"></Label>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Campo de entrada para mostrar el resultado -->
+            <Entry x:Name="resultEntry"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="FillAndExpand"
+                   FontSize="Large"
+                   IsReadOnly="True"
+                   Text=""
+                   Keyboard="Numeric" />
+
+            <!-- Botones numéricos -->
+            <Button x:Name="button0"
+        Grid.Row="4"
+        Grid.Column="1"
+        FontSize="Large"
+        Text="0"
+        Clicked="NumberButton_Clicked" />
+
+            <Button x:Name="button1"
+        Grid.Row="1"
+        Grid.Column="0"
+        FontSize="Large"
+        Text="1"
+        Clicked="NumberButton_Clicked" />
+
+            <!-- Repetir para los botones del 2 al 9 -->
+            <Button x:Name="button2"
+        Grid.Row="1"
+        Grid.Column="1"
+        FontSize="Large"
+        Text="2"
+        Clicked="NumberButton_Clicked" />
+
+            <Button x:Name="button3"
+        Grid.Row="1"
+        Grid.Column="2"
+        FontSize="Large"
+        Text="3"
+        Clicked="NumberButton_Clicked" />
+
+            <!-- Repetir para los botones del 4 al 9 -->
+
+            <Button x:Name="button4"
+        Grid.Row="2"
+        Grid.Column="0"
+        FontSize="Large"
+        Text="4"
+        Clicked="NumberButton_Clicked" />
+
+            <Button x:Name="button5"
+        Grid.Row="2"
+        Grid.Column="1"
+        FontSize="Large"
+        Text="5"
+        Clicked="NumberButton_Clicked" />
+
+            <!-- Repetir para los botones del 6 al 9 -->
+
+            <Button x:Name="button6"
+        Grid.Row="2"
+        Grid.Column="2"
+        FontSize="Large"
+        Text="6"
+        Clicked="NumberButton_Clicked" />
+
+            <Button x:Name="button7"
+        Grid.Row="3"
+        Grid.Column="0"
+        FontSize="Large"
+        Text="7"
+        Clicked="NumberButton_Clicked" />
+
+            <!-- Repetir para los botones del 8 al 9 -->
+
+            <Button x:Name="button8"
+        Grid.Row="3"
+        Grid.Column="1"
+        FontSize="Large"
+        Text="8"
+        Clicked="NumberButton_Clicked" />
+
+            <Button x:Name="button9"
+        Grid.Row="3"
+        Grid.Column="2"
+        FontSize="Large"
+        Text="9"
+        Clicked="NumberButton_Clicked" />
+
+            <!-- Botones de operaciones -->
+            <Button x:Name="addButton"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    FontSize="Large"
+                    Text="+"
+                    Clicked="OperationButton_Clicked" />
+            <Button x:Name="subtractButton"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    FontSize="Large"
+                    Text="-"
+                    Clicked="OperationButton_Clicked" />
+            <Button x:Name="multiplyButton"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    FontSize="Large"
+                    Text="*"
+                    Clicked="OperationButton_Clicked" />
+            <Button x:Name="divideButton"
+                    Grid.Row="4"
+                    Grid.Column="3"
+                    FontSize="Large"
+                    Text="/"
+                    Clicked="OperationButton_Clicked" />
+            <Button x:Name="equalsButton"
+                    Grid.Row="5"
+                    Grid.Column="3"
+                    FontSize="Large"
+                    Text="="
+                    Clicked="EqualsButton_Clicked" />
+
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
